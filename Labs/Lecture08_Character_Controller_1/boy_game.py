@@ -25,16 +25,12 @@ class Boy:
     def update(self):
         self.frame = (self.frame + 1) % 8
 
-    def handle_event(self, event):
-        pass
-
     def draw(self):
         self.image.clip_draw(self.frame * 100, self.action * 100, 100, 100, self.x, self.y)
 
 
 def handle_events():
     global running
-    global boy
 
     event_list = get_events()
     for event in event_list:
