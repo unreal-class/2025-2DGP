@@ -3,7 +3,7 @@ from sdl2 import SDL_KEYDOWN, SDLK_SPACE, SDLK_RIGHT, SDL_KEYUP, SDLK_LEFT
 
 import game_world
 import game_framework
-from ball import Ball, BigBall
+from ball import Ball
 from state_machine import StateMachine
 
 
@@ -163,11 +163,6 @@ class Boy:
 
 
     def fire_ball(self):
-        if self.item == 'Ball':
-            ball = Ball(self.x, self.y, self.face_dir * 10)
-            game_world.add_object(ball)
-        elif self.item == 'BigBall':
-            ball = BigBall(self.x, self.y, self.face_dir * 10)
-            game_world.add_object(ball)
-        else:
-            print('소년은 볼이 없습니다.')
+        ball = Ball(self.x, self.y, self.face_dir * 10)
+        game_world.add_object(ball)
+
