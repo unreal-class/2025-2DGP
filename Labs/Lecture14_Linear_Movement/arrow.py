@@ -20,7 +20,6 @@ class Arrow:
 
     def draw(self):
         self.image.draw(self.x+25, self.y-25)
-        draw_rectangle(*self.get_bb())
 
     def handle_collision(self, group, other):
         pass

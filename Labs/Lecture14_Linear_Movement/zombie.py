@@ -38,7 +38,6 @@ class Zombie:
 
         self.arrow = Arrow()
         game_world.add_object(self.arrow, 2)
-        game_world.add_collision_pair('zombie:arrow', self, self.arrow)
 
         # 여기를 채우시오.
 
@@ -66,7 +65,6 @@ class Zombie:
 
 
     def handle_collision(self, group, other):
-        # 여기를 채우시오.
         pass
 
 
