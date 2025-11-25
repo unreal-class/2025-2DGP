@@ -109,7 +109,7 @@ class Zombie:
         pass
 
 
-    def is_boy_nearby(self, distance):
+    def if_boy_nearby(self, distance):
         # 여기를 채우시오.
         pass
 
