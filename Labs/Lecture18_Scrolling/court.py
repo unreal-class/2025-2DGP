@@ -46,9 +46,7 @@ class InfiniteCourt:
 
     def draw(self):
         self.image.clip_draw_to_origin(self.q3l, self.q3b, self.q3w, self.q3h, 0, 0)                        # quadrant 3
-        self.image.clip_draw_to_origin(self.q2l, self.q2b, self.q2w, self.q2h, 0, self.q3h)                 # quadrant 2
-        self.image.clip_draw_to_origin(self.q4l, self.q4b, self.q4w, self.q4h, self.q3w, 0)                 # quadrant 4
-        self.image.clip_draw_to_origin(self.q1l, self.q1b, self.q1w, self.q1h, self.q3w, self.q3h)          # quadrant 1
+        # fill here
 
     def update(self):
         # quadrant 3
@@ -57,20 +55,20 @@ class InfiniteCourt:
         self.q3w = clamp(0, self.w - self.q3l, self.w)
         self.q3h = clamp(0, self.h - self.q3b, self.h)
         # quadrant 2
-        self.q2l = self.q3l
+        self.q2l = 0
         self.q2b = 0
-        self.q2w = self.q3w
-        self.q2h = self.ch - self.q3h
+        self.q2w = 0
+        self.q2h = 0
         # quadrand 4
         self.q4l = 0
-        self.q4b = self.q3b
-        self.q4w = self.cw - self.q3w
-        self.q4h = self.q3h
+        self.q4b = 0
+        self.q4w = 0
+        self.q4h = 0
         # quadrand 1
         self.q1l = 0
         self.q1b = 0
-        self.q1w = self.q4w
-        self.q1h = self.q2h
+        self.q1w = 0
+        self.q1h = 0
 
 
     def handle_event(self, event):
