@@ -70,12 +70,6 @@ class Selector(Node):
                 self.has_condition = True
 
 
-    def reset(self):
-        self.prev_running_pos = 0
-        for node in self.children:
-            node.reset()
-
-
     @Node.show_result
     def run(self):
         for i, child in enumerate(self.children):
